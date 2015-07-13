@@ -320,6 +320,8 @@ static void trim_xilinx_version(char *x)
             char *p;
             long digit;
             digit=strtol(x+1, &p, 0);
+            if(digit)
+                digit = digit;
             if ( *p == '.') {
                 *x = 0;
                 return;
